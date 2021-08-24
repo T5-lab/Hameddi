@@ -1,0 +1,16 @@
+{
+  "name": "hameddi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/run.js",
+  "scripts": {
+    "start": "nodemon bin/run.js | bunyan -o short"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.15",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.8"
+  }
+}
