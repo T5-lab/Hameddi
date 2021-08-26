@@ -7,7 +7,7 @@ const config = require('../config')[process.env.NODE_ENV || 'development'];
 
 const log = config.log();
 
-mongoose.connect(config.dbAddress, {
+mongoose.connect(config.DB_ADDRESS, {
   useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true

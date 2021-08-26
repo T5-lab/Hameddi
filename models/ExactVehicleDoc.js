@@ -3,38 +3,31 @@ const mongoose = require('mongoose');
 const ExactVehicleDocSchema = mongoose.Schema({
     saleFactor: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     greenSheet: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     insurance: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     tax: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     property: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     advocates: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     idCard: [{
         type: String,
-        required: true,
-        unique: true
+        required: true
     }]
 })
 

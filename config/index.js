@@ -1,4 +1,5 @@
 const bunyan = require('bunyan');
+const path = require('path');
 // Load package.json
 const pjs = require('../package.json');
 
@@ -14,21 +15,21 @@ module.exports = {
     name,
     version,
     serviceTimeout: 30,
-    dbAddress: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
+    DB_ADDRESS: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
     log: () => getLogger(name, version, 'debug'),
   },
   production: {
     name,
     version,
     serviceTimeout: 30,
-    dbAddress: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
+    DB_ADDRESS: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
     log: () => getLogger(name, version, 'info'),
   },
   test: {
     name,
     version,
     serviceTimeout: 30,
-    dbAddress: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
+    DB_ADDRESS: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
     log: () => getLogger(name, version, 'fatal'),
   },
 };
