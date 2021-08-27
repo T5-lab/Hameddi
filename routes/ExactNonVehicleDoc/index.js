@@ -12,13 +12,7 @@ module.exports = () => {
     router.post('/add', upload.array('photos', 9), handleFiles, async (req, res, next) => {
         try {
             let doc = new ExactNonVehicleDoc({
-                oneSheetDoc: req.doc.oneSheetDoc,
-                payankar: req.doc.payankar,
-                mobainame: req.doc.mobainame,
-                propertyReport: req.doc.propertyReport,
-                majlesTafkiki: req.doc.majlesTafkiki,
-                oqaf: req.doc.oqaf,
-                advocates: req.doc.advocates,
+                ...req.doc,
                 idCard: [
                     req.doc['idCard1'],
                     req.doc['idCard2']

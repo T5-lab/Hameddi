@@ -12,12 +12,7 @@ module.exports = () => {
     router.post('/add', upload.array('photos', 8), handleFiles, async (req, res, next) => {
         try {
             let doc = new ExactVehicleDoc({
-                saleFactor: req.doc.saleFactor,
-                greenSheet: req.doc.greenSheet,
-                insurance: req.doc.insurance,
-                tax: req.doc.tax,
-                property: req.doc.property,
-                advocates: req.doc.advocates,
+                ...req.doc,
                 idCard: [
                     req.doc["idCard1"],
                     req.doc["idCard2"]
