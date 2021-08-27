@@ -18,8 +18,7 @@ module.exports = () => {
                 ],
                 docForm: req.doc.docForm
             });
-            doc = await doc.save();
-            res.send(doc);
+            res.send(await doc.save());
         } catch (e) {
             cleanup(req.doc);
             return next(e);
