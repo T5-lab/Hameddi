@@ -21,14 +21,17 @@ const ExactVehicleDocSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    advocates: {
-        type: String,
-        required: true
-    },
     idCard: [{
         type: String,
         required: true
-    }]
+    }],
+    advocates: {
+        type: String
+    },
+    advocacy: {
+        type: Boolean,
+        required: true
+    }
 })
 
 module.exports = mongoose.model('exactVehicleDoc', ExactVehicleDocSchema);
