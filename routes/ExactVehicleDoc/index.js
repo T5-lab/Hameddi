@@ -11,9 +11,6 @@ module.exports = () => {
 
     router.post('/add', upload.array('photos', 8), handleFiles, async (req, res, next) => {
         try {
-            if(req.body.advocacy === "false") {
-                delete req.doc.advocates;
-            }
             let doc = new ExactVehicleDoc({
                 ...req.doc,
                 idCard: [

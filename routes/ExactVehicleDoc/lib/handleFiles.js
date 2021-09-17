@@ -17,7 +17,6 @@ function findCategory(i) {
 module.exports = (req, res, next) => {
     const BASE_DIR = path.resolve(`${__dirname}/../../../public`);
     req.doc = {};
-    if(req.files.length === 7 && req.body.advocacy === "true") return next("advocates is required");
     req.files.forEach((file, i) => {
         if(file.mimetype !== 'image/jpeg' && file.mimetype !== 'image/jpg' && file.mimetype !== 'image/png') {
             return next("invalid format");

@@ -26,7 +26,8 @@ const ExactVehicleDocSchema = mongoose.Schema({
         required: true
     }],
     advocates: {
-        type: String
+        type: String,
+        required: true
     },
     advocacy: {
         type: Boolean,
