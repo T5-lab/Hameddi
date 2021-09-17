@@ -16,6 +16,7 @@ module.exports = {
     version,
     serviceTimeout: 30,
     DB_ADDRESS: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
+    FRONT_ADDRESS: '*',
     log: () => getLogger(name, version, 'debug'),
   },
   production: {
@@ -23,6 +24,7 @@ module.exports = {
     version,
     serviceTimeout: 30,
     DB_ADDRESS: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
+    FRONT_ADDRESS: 'https://asnad2k.ir',
     log: () => getLogger(name, version, 'info'),
   },
   test: {
@@ -30,6 +32,7 @@ module.exports = {
     version,
     serviceTimeout: 30,
     DB_ADDRESS: 'mongodb+srv://admin:UYJja7m47csrHGPE@cluster0.q3l6k.mongodb.net/Hameddi?retryWrites=true&w=majority',
+    FRONT_ADDRESS: 'https://asnad2k.ir',
     log: () => getLogger(name, version, 'fatal'),
   },
 };
