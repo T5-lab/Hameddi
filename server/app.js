@@ -18,6 +18,7 @@ module.exports = (config) => {
     });
   }
 
+  //middlewares
   app.use(compression());
   app.use(cors({origin: config.FRONT_ADDRESS}));
   app.use(helmet());
