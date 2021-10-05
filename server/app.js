@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
+const compression = require('compression');
 
 const app = express();
 
@@ -17,6 +18,7 @@ module.exports = (config) => {
     });
   }
 
+  app.use(compression());
   app.use(cors({origin: config.FRONT_ADDRESS}));
   app.use(helmet());
 
